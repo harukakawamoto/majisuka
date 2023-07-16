@@ -58,7 +58,9 @@ export default function Home() {
     recognition.continuous = true;
     recognition.start();
   };
-  startRecognition();
+  if (typeof window !== "undefined") {
+    startRecognition();
+  }
 
   return (
     <>
